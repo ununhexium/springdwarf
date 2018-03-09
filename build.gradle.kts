@@ -2,9 +2,9 @@ import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.
 import org.junit.platform.console.options.Details
 import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 
-val junitPlatformVersion = "1.0.1"
-val junitJupiterVersion  = "5.0.1"
-val log4jVersion = "2.9.1"
+val junitPlatformVersion = "1.0.+"
+val junitJupiterVersion  = "5.0.+"
+val log4jVersion = "2.9.+"
 
 plugins {
     val kotlinVersion = "1.2.30"
@@ -37,7 +37,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.1")
+        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.+")
     }
 }
 
