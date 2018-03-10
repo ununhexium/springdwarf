@@ -3,6 +3,7 @@ import org.junit.platform.console.options.Details
 import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 
 
+val assertJVersion = "3.+"
 val junitPlatformVersion = "1.0.+"
 val junitJupiterVersion = "5.0.+"
 val springVersion = "5.0.4.RELEASE"
@@ -26,7 +27,8 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
     compile("org.springframework.shell:spring-shell-starter:$springBootVersion")
-    
+
+    compile("org.assertj:assertj-core:$assertJVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
     testImplementation("org.springframework:spring-test:$springVersion")
     testImplementation("org.springframework.boot:spring-boot-test:$springBootVersion")

@@ -1,7 +1,6 @@
 package net.lab0.shell
 
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -29,7 +28,10 @@ internal class HelloTest {
 
         val methodTarget = commands["hello"]!!
 
-        Assertions.assertTrue(methodTarget.availability.isAvailable)
-        Assertions.assertEquals("hello", ReflectionUtils.invokeMethod(methodTarget.method, methodTarget.bean))
+        assertThat(methodTarget.availability.isAvailable).isTrue()
+
+        assertThat(
+                ReflectionUtils.invokeMethod(methodTarget.method, methodTarget.bean)
+        ).isEqualTo("hello")
     }
 }
