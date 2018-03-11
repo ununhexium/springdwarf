@@ -3,12 +3,12 @@ import org.junit.platform.console.options.Details
 import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 
 
-val assertJVersion = "3.+"
-val junitPlatformVersion = "1.0.+"
-val junitJupiterVersion = "5.0.+"
+val assertJVersion = "3.9.1"
+val junitPlatformVersion = "1.0.1"
+val junitJupiterVersion = "5.0.1"
 val springVersion = "5.0.4.RELEASE"
 val springBootVersion = "2.0.0.RELEASE"
-val log4jVersion = "2.9.+"
+val log4jVersion = "2.10.0"
 
 plugins {
     val kotlinVersion = "1.2.30"
