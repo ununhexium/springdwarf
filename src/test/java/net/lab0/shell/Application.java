@@ -1,8 +1,6 @@
 package net.lab0.shell;
 
-import org.jline.reader.ParsedLine;
 import org.jline.reader.Parser;
-import org.jline.reader.SyntaxError;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,10 +12,11 @@ import org.springframework.shell.jline.JLineShellAutoConfiguration;
 @ComponentScan(basePackages = {"net.lab0.shell"})
 @EnableAutoConfiguration(exclude = {JLineShellAutoConfiguration.class})
 public class Application {
+
   public static void main(String[] args) {
     SpringApplication.run(Application.class, args);
   }
-  
+
   @Bean
   public Parser parser() {
     return (var1, var2, var3) -> null;
