@@ -31,7 +31,7 @@ internal class HelloTest {
         assertThat(methodTarget.availability.isAvailable).isTrue()
 
         assertThat(
-                ReflectionUtils.invokeMethod(methodTarget.method, methodTarget.bean)
+            ReflectionUtils.invokeMethod(methodTarget.method, methodTarget.bean)
         ).isEqualTo("hello")
     }
 }

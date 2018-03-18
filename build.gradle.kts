@@ -5,10 +5,14 @@ val springBootVersion = "2.0.0.RELEASE"
 
 plugins {
   val kotlinVersion = "1.2.30"
+  val springBootVersion = "2.0.0.RELEASE"
+
   id("org.jetbrains.kotlin.jvm") version kotlinVersion
   java
   idea
+  id ("org.springframework.boot") version springBootVersion
 }
+
 
 idea {
   module {
@@ -59,9 +63,8 @@ tasks.withType<Jar> {
   manifest {
     attributes(
         mapOf(
-            "Main-Class" to "net.lab0.shell.Application"
+            "Start-Class" to "net.lab0.dwarf.shell.Application"
         )
     )
   }
 }
-
